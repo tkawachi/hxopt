@@ -3,8 +3,6 @@ package hxopt;
 import haxe.ds.Option;
 import haxe.macro.Expr;
 
-using Lambda;
-
 /**
  * Functions used with Option.
  * 
