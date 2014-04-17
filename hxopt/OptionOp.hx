@@ -8,7 +8,7 @@ import haxe.macro.Expr;
  * 
  * Example:
  * using OptionOp;
- * 123.newOption().map(function(v) { return v * 2; });
+ * 123.option().map(function(v) { return v * 2; });
  */
 class OptionOp {
     public static function map<A,B>(opt: Option<A>, f: A -> B): Option<B> {
@@ -93,7 +93,7 @@ class OptionOp {
         return Type.enumEq(opt1, opt2);
     }
 
-    public static function newOption<A>(arg: Null<A>): Option<A> {
+    public static function option<A>(arg: Null<A>): Option<A> {
         return if (arg != null) Some(arg) else None;
     }
 

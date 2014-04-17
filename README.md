@@ -8,7 +8,7 @@
     class Example {
             static function main() {
                     var x: Null<Int> = 1;
-                    var optX: Option<Int> = x.newOption();
+                    var optX: Option<Int> = x.option();
                     var i: Int = optX.getOrElse(2);
             }
     }
