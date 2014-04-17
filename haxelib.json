@@ -1,0 +1,12 @@
+{
+  "name": "hxopt",
+  "license": "MIT",
+  "tags": [],
+  "description": "Functions used with haxe.ds.Option",
+  "contributors": ["kawachi"],
+  "releasenote": "Initial release, everything is working correctly",
+  "version": "0.0.1",
+  "url": "http://myproject.org",
+  "dependencies": {
+  }
+}
