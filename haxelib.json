@@ -4,8 +4,8 @@
   "tags": [],
   "description": "Functions used with haxe.ds.Option",
   "contributors": ["kawachi"],
-  "releasenote": "Initial release, everything is working correctly",
-  "version": "0.0.1",
+  "releasenote": "newOption() is renamed to option()",
+  "version": "0.1.0",
   "url": "https://github.com/tkawachi/hxopt",
   "dependencies": {
   }
