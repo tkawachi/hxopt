@@ -13,5 +13,5 @@
             }
     }
 
-See https://github.com/tkawachi/hxopt/blob/master/hxopt/OptionOp.hx for all functions.
+See hxopt/OptionOp.hx for all functions.
 
