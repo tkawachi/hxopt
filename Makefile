@@ -1,14 +1,21 @@
-.PHONY: clean dist
+.PHONY: clean dist test
 
 SRC_DIR = src/main
 PKG_DIR = $(SRC_DIR)/hxopt
 HX_SRC = $(PKG_DIR)/*.hx
+TEST_SRC= src/test/*.hx
 LIB_JSON = $(SRC_DIR)/haxelib.json
 
-all: dist
+all: test
+
+test: target/build Makefile $(HX_SRC) $(LIB_JSON) $(TEST_SRC)
+	haxelib run munit test
 
 target:
 	@mkdir target
+
+target/build: target
+	@mkdir target/build
 
 dist: target/hxopt.zip
 
