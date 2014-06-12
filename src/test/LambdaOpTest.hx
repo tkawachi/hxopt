@@ -16,10 +16,10 @@ class LambdaOpTest  {
         isFalse(ary.forall(function(e) { return e % 2 == 0; }));
     }
 
-    @Test public function testFindOpt() {
+    @Test public function testFindOption() {
         var ary = [1, 2, 3, 4, 5];
-        areEqual(Some(3), ary.findOpt(function(e) { return e > 2; }));
-        areEqual(None, ary.findOpt(function(e) { return e < 0; }));
+        areEqual(Some(3), ary.findOption(function(e) { return e > 2; }));
+        areEqual(None, ary.findOption(function(e) { return e < 0; }));
     }
 
     @Test public function testIndexWhere() {
@@ -28,33 +28,33 @@ class LambdaOpTest  {
         areSame(-1, ary.indexWhere(function(e) { return e < 0; }));
     }
 
-    @Test public function testHeadOpt1() {
+    @Test public function testHeadOption1() {
         var ary = [3, 4 ,5];
-        areEqual(Some(3), ary.headOpt());
+        areEqual(Some(3), ary.headOption());
     }
 
-    @Test public function testHeadOpt2() {
+    @Test public function testHeadOption2() {
         var ary = [];
-        areEqual(None, ary.headOpt());
+        areEqual(None, ary.headOption());
     }
 
-    @Test public function testHeadOpt3() {
+    @Test public function testHeadOption3() {
         var ary = [null];
-        areEqual(Some(null), ary.headOpt());
+        areEqual(Some(null), ary.headOption());
     }
 
-    @Test public function testLastOpt1() {
+    @Test public function testLastOption1() {
         var ary = [3, 4 ,5];
-        areEqual(Some(5), ary.lastOpt());
+        areEqual(Some(5), ary.lastOption());
     }
     
-    @Test public function testLastOpt2() {
+    @Test public function testLastOption2() {
         var ary = [];
-        areEqual(None, ary.lastOpt());
+        areEqual(None, ary.lastOption());
     }
 
-    @Test public function testLastOpt3() {
+    @Test public function testLastOption3() {
         var ary = [null];
-        areEqual(Some(null), ary.lastOpt());
+        areEqual(Some(null), ary.lastOption());
     }
 }

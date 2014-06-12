@@ -14,14 +14,14 @@ class LambdaOp {
         });
     }
 
-    public static function headOpt<A>(it: Iterable<A>): Option<A> {
+    public static function headOption<A>(it: Iterable<A>): Option<A> {
         for (v in it) {
             return Some(v);
         }
         return None;
     }
 
-    public static function lastOpt<A>(it: Iterable<A>): Option<A> {
+    public static function lastOption<A>(it: Iterable<A>): Option<A> {
         var r: Option<A> = None;
         for (v in it) {
             r = Some(v);
@@ -29,7 +29,7 @@ class LambdaOp {
         return r;
     }
 
-    public static function findOpt<A>(it: Iterable<A>, f: A -> Bool): Option<A> {
+    public static function findOption<A>(it: Iterable<A>, f: A -> Bool): Option<A> {
         return it.find(f).option();
     }
 
@@ -55,7 +55,7 @@ class LambdaOp {
  * Faster implementation for Array.
  */
 class ArrayOp {
-    public static function lastOpt<A>(ary: Array<A>): Option<A> {
+    public static function lastOption<A>(ary: Array<A>): Option<A> {
         return
             if (ary.length == 0) None;
             else Some(ary[ary.length - 1]);

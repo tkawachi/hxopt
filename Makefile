@@ -12,10 +12,10 @@ test: target/build Makefile $(HX_SRC) $(LIB_JSON) $(TEST_SRC)
 	haxelib run munit test
 
 target:
-	@mkdir target
+	@mkdir -p target
 
 target/build: target
-	@mkdir target/build
+	@mkdir -p target/build
 
 dist: target/hxopt.zip
 
