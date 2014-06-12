@@ -15,5 +15,8 @@ dist: target/hxopt.zip
 target/hxopt.zip: target Makefile $(HX_SRC) $(LIB_JSON)
 	cd src/main && zip -r ../../target/hxopt.zip . -x \*~
 
+release:
+	haxelib submit target/hxopt.zip
+
 clean:
 	@rm -r target
